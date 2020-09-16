@@ -150,4 +150,5 @@ class RA_PT_material(bpy.types.Panel):
             if m.index == ra_mat_props.mat_id:
                 col.prop(m, 'description')
                 col.prop(m, 'alpha')
+                col.prop(ra_mat_props, 'scattering')
                 break

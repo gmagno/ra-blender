@@ -81,15 +81,15 @@ class RAMaterialProps(bpy.types.PropertyGroup):
         name="MaterialId", description="The material Id", default=0, min=0
     )
 
-    # scattering: bpy.props.FloatProperty(
-    #     name="scattering",
-    #     description="The material scattering coefficient. Represents the "
-    #         "probability of a non-absorbed ray to be reflected as diffuse (as "
-    #         "opposed to specular)",
-    #     default=0.1,
-    #     soft_min=0.0,
-    #     soft_max=1.0,
-    # )
+    scattering: bpy.props.FloatProperty(
+        name="scattering",
+        description="The material scattering coefficient. Represents the "
+            "probability of a non-absorbed ray to be reflected as diffuse (as "
+            "opposed to specular)",
+        default=0.1,
+        soft_min=0.0,
+        soft_max=1.0,
+    )
 
 
 

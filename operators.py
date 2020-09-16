@@ -79,6 +79,7 @@ class RA_OT_run(bpy.types.Operator):
                             return {'FINISHED'}
 
                         mat_idx = obj.active_material.ra.mat_id
+                        scattering = obj.active_material.ra.scattering
                         for m in bpy.context.scene.ra.mat_db:
                             if m.index == mat_idx:
                                 alpha = np.array(
@@ -99,7 +100,7 @@ class RA_OT_run(bpy.types.Operator):
                             'normal': normal,
                             # 'alpha': np.array([0.14]*8, dtype=np.float32),
                             'alpha': alpha,
-                            's': 0.02,
+                            's': scattering,
                             # 'area': tri.area  # FIXME: should be computed by the engine
                             'area': area
                         })
